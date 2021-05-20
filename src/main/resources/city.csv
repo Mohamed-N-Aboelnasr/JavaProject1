@@ -1,0 +1,12 @@
+id,cid,name,capital,surfaceArea,population
+1,1,ismailia,No,100000,1000000
+2,1,cairo,Yes,200000,12000000
+3,1,port said,No,150000,800000
+4,2,London,Yes,300000,3000000
+5,2,Manchester,No,250000,2000000
+6,3,Boston,No,400000,4000000
+7,3,NY,Yes,500000,6000000
+8,4,Toronto,Yes,350000,4000000
+9,4,Montreal,NO,270000,5000000
+10,5,Kyoto,NO,290000,6000000
+11,5,Tokyo,Yes,350000,10000000
