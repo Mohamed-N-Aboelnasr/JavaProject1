@@ -14,31 +14,22 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
-/**
- * Hello world!
- */
+
 public class XChartTitanic {
     public static void main(String[] args) {
         XChartTitanic xChartTitanic = new XChartTitanic();
         List<TitanicPassenger> allPassengers = xChartTitanic.getPassengersFromJsonFile ();
         xChartTitanic.graphPassengerAges (allPassengers);
-        try {
-            System.in.read();
-        } catch (IOException ex) {
-            Logger.getLogger(XChartTitanic.class.getName()).log(Level.SEVERE, null, ex);
-        }
         xChartTitanic.graphPassengerClass (allPassengers);
     }
     // Read json file and return a list containing TitanicPassenger Objects
     public List<TitanicPassenger> getPassengersFromJsonFile() {
-        List<TitanicPassenger> allPassengers = new ArrayList<TitanicPassenger> ();
+        List<TitanicPassenger> allPassengers = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper ();
         objectMapper.configure (DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        try (InputStream input = new FileInputStream ("C:\\Users\\Mohamed Nasser\\IdeaProjects\\JavaProject1\\src\\main\\resources\\titanic_csv.json")) {
+        try (InputStream input = new FileInputStream ("src\\main\\resources\\titanic_csv.json")) {
             //Read JSON file
             allPassengers = objectMapper.readValue (input, new TypeReference<List<TitanicPassenger>> () {
             });
